@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) UIView* testView;
+@property (weak, nonatomic) UIView* testView2;
 
 @end
 
@@ -25,8 +26,13 @@
     
     [self.view addSubview:view];
     
-    self.testView = view;
+    UIView* view2 = [[UIView alloc] initWithFrame:CGRectMake(30, 200, 40, 40)];
+    view2.backgroundColor = [UIColor blueColor];
     
+    [self.view addSubview:view2];
+    
+    self.testView = view;
+    self.testView2 = view2;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -38,7 +44,8 @@
 //                     }];
     
 
-    [self moveView:self.testView];
+    [self moveView:self.testView:5];
+    [self moveView:self.testView2:1];
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [self.testView.layer removeAllAnimations];
@@ -47,16 +54,22 @@
     
 }
 
-- (void) moveView:(UIView*) view {
+- (void) moveView:(UIView*) view :(double) dur {
     
-    [UIView animateWithDuration:2
+    CGRect rect = self.view.bounds;
+    
+    rect = CGRectInset(rect, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
+    
+    CGFloat x = arc4random() % (int)CGRectGetWidth(rect) + CGRectGetMinX(rect);
+    
+    [UIView animateWithDuration:dur
                           delay:0
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
-                         view.center = CGPointMake(300, 50);
+                         view.center = CGPointMake(300, 200);
                          view.backgroundColor = [self randomColor];
                          
-                         CGAffineTransform scale = CGAffineTransformMakeScale(2, 0.5);
+                         CGAffineTransform scale = CGAffineTransformMakeScale(2, 2);
                          CGAffineTransform rotation = CGAffineTransformMakeRotation(M_PI);
                          
                          CGAffineTransform transform = CGAffineTransformConcat(scale, rotation);
