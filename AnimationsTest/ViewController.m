@@ -21,11 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIImageView* view = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
+    UIImageView* view = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
     
-    UIImage* image1 = [UIImage imageWithContentsOfFile:@"/Users/sergejlepinin/Documents/iOSeducation/objC/objC_uiviewAnim/AnimationsTest/images/1.jpg"];
-    UIImage* image2 = [UIImage imageWithContentsOfFile:@"/Users/sergejlepinin/Documents/iOSeducation/objC/objC_uiviewAnim/AnimationsTest/images/2.jpg"];
-    UIImage* image3 = [UIImage imageWithContentsOfFile:@"/Users/sergejlepinin/Documents/iOSeducation/objC/objC_uiviewAnim/AnimationsTest/images/3.jpg"];
+    UIImage* image1 = [UIImage imageNamed:@"1.jpg"];
+    UIImage* image2 = [UIImage imageNamed:@"2.jpg"];
+    UIImage* image3 = [UIImage imageNamed:@"3.jpg"];
     
     NSArray* images = [NSArray arrayWithObjects:image1, image2, image3, image1, nil];
     
@@ -33,7 +33,7 @@
     view.animationDuration = 1.0f;
     [view startAnimating];
     
-    //view.backgroundColor = [UIColor greenColor];
+    view.backgroundColor = [UIColor greenColor];
     
     [self.view addSubview:view];
     
@@ -81,7 +81,7 @@
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          view.center = CGPointMake(x, y);
-                         //view.backgroundColor = [self randomColor];
+                         view.backgroundColor = [self randomColor];
                          
                          CGAffineTransform scale = CGAffineTransformMakeScale(rndScale, rndScale);
                          CGAffineTransform rotation = CGAffineTransformMakeRotation(rndRotate);
