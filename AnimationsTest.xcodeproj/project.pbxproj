@@ -15,6 +15,7 @@
 		8411090B20E3967C00A9C87D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411090A20E3967C00A9C87D /* main.m */; };
 		8411091520E3967C00A9C87D /* AnimationsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411091420E3967C00A9C87D /* AnimationsTestTests.m */; };
 		8411092020E3967C00A9C87D /* AnimationsTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411091F20E3967C00A9C87D /* AnimationsTestUITests.m */; };
+		8BCD7AAD223A72FE0016D8B7 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8BCD7AAC223A72FE0016D8B7 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8411091B20E3967C00A9C87D /* AnimationsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8411091F20E3967C00A9C87D /* AnimationsTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationsTestUITests.m; sourceTree = "<group>"; };
 		8411092120E3967C00A9C87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BCD7AAC223A72FE0016D8B7 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				8411090620E3967C00A9C87D /* LaunchScreen.storyboard */,
 				8411090920E3967C00A9C87D /* Info.plist */,
 				8411090A20E3967C00A9C87D /* main.m */,
+				8BCD7AAC223A72FE0016D8B7 /* images */,
 			);
 			path = AnimationsTest;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCD7AAD223A72FE0016D8B7 /* images in Resources */,
 				8411090820E3967C00A9C87D /* LaunchScreen.storyboard in Resources */,
 				8411090520E3967C00A9C87D /* Assets.xcassets in Resources */,
 				8411090320E3967100A9C87D /* Main.storyboard in Resources */,
